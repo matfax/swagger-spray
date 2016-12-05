@@ -1,6 +1,6 @@
 # swagger-spray
 
-[![Build Status](https://travis-ci.org/swagger-spray/swagger-spray.svg?branch=master)](https://travis-ci.org/swagger-spray/swagger-spray)
+[![](https://jitpack.io/v/matfax/swagger-spray-shapeless23.svg)](https://jitpack.io/#matfax/swagger-spray-shapeless23)
 
 Swagger-Spray brings [Swagger](http://swagger.io/swagger-core/) support for [Spray](http://spray.io) Apis. The included ```SwaggerHttpService``` route will inspect Scala types with Swagger annotations and build a swagger compliant endpoint for a [swagger compliant ui](http://petstore.swagger.io/).
 
