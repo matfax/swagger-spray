@@ -9,6 +9,8 @@ coverageHighlighting := {
   else false
 }
 
+scalacOptions += "-target:jvm-1.8"
+
 scalaVersion := "2.11.8"
 
 checksums in update := Nil
