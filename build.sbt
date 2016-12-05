@@ -4,11 +4,6 @@ name := "swagger-spray"
 
 EclipseKeys.withSource := true
 
-coverageHighlighting := {
-  if (scalaBinaryVersion.value == "2.10") false
-  else false
-}
-
 scalacOptions += "-target:jvm-1.8"
 
 scalaVersion := "2.11.8"
