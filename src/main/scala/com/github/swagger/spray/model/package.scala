@@ -66,8 +66,8 @@ package object model {
       .version(convertMe.version)
       .title(convertMe.title)
       .termsOfService(convertMe.termsOfService)
-      .contact(convertMe.contact.orNull)
-      .license(convertMe.license.orNull)
+      .contact(convertMe.contact.getOrElse(null))
+      .license(convertMe.license.getOrElse(null))
 
     ret.getVendorExtensions.putAll(convertMe.vendorExtensions.asJava)
     ret
