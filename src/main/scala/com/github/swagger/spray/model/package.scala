@@ -1,11 +1,9 @@
 package com.github.swagger.spray
 
 import scala.collection.JavaConverters._
-import io.swagger.models.{
-Info ⇒ SwaggerInfo,
-Contact ⇒ SwaggerContact,
-License ⇒ SwaggerLicense
-}
+import io.swagger.models.{Contact => SwaggerContact, Info => SwaggerInfo, License => SwaggerLicense}
+
+import scala.language.implicitConversions
 
 /**
  * @author rleibman
@@ -68,8 +66,8 @@ package object model {
       .version(convertMe.version)
       .title(convertMe.title)
       .termsOfService(convertMe.termsOfService)
-      .contact(convertMe.contact.getOrElse(null))
-      .license(convertMe.license.getOrElse(null))
+      .contact(convertMe.contact.orNull)
+      .license(convertMe.license.orNull)
 
     ret.getVendorExtensions.putAll(convertMe.vendorExtensions.asJava)
     ret

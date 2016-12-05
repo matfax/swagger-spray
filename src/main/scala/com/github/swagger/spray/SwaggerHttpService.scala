@@ -13,8 +13,8 @@ import spray.routing.{ HttpService, Route }
 
 object SwaggerHttpService {
   val readerConfig = new ReaderConfig {
-    def getIgnoredRoutes(): java.util.Collection[String] = List[String]().asJavaCollection
-    def isScanAllResources(): Boolean = false
+    def getIgnoredRoutes: java.util.Collection[String] = List[String]().asJavaCollection
+    def isScanAllResources: Boolean = false
   }
   
   def toJavaTypeSet(apiTypes: Seq[Type]): Set[Class[_]] ={
@@ -27,7 +27,7 @@ object SwaggerHttpService {
     if (typeSymbol.isModuleClass) {
       val idx = fullName.lastIndexOf('.')
       if (idx >=0) {
-        val mangledName = s"${fullName.slice(0, idx)}$$${fullName.slice(idx+1,fullName.size)}$$"
+        val mangledName = s"${fullName.slice(0, idx)}$$${fullName.slice(idx+1,fullName.length)}$$"
         mangledName
       } else fullName
     } else fullName
